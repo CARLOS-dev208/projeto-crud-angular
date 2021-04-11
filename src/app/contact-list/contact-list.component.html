@@ -3,9 +3,10 @@
 </mat-toolbar>
 
 <mat-nav-list>
-    <mat-list-item>
-        <a matLine href="#" class="black">Contatos 1</a>
-        <button mat-icon-button class="black">
+    <mat-list-item *ngFor='let list of contatos'>
+        <a matLine [routerLink]="['/contacts', list.id]" class="black">{{list.name}}</a>
+        <span>{{list.phone | celular}}</span>
+        <button (click)='deletaContato(list)' mat-icon-button class="black">
         <mat-icon>delete</mat-icon>
      </button>
     </mat-list-item>

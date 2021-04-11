@@ -4,17 +4,19 @@
 
 
 <div class="formConteiner">
-    <mat-form-field appearance="standard">
-        <mat-label>Nome</mat-label>
-        <input matInput>
-    </mat-form-field>
-    <mat-form-field appearance="standard">
-        <mat-label>Telefone</mat-label>
-        <input matInput>
-    </mat-form-field>
+    <form [formGroup]="contactForm" (ngSubmit)="criaContato()" class="formContent">
+        <mat-form-field appearance="standard">
+            <mat-label>Nome</mat-label>
+            <input autofocus matInput formControlName="name">
+        </mat-form-field>
+        <mat-form-field appearance="standard">
+            <mat-label>Telefone</mat-label>
+            <input prefix="+55 " mask="(00) 0000-0000 ||(00) 0 0000-0000" matInput formControlName="phone">
+        </mat-form-field>
 
-    <div class="actions">
-        <a routerLink="/contacts" mat-raised-button>Volta</a>
-        <button type="submit" mat-raised-button color="primary">Criar</button>
-    </div>
+        <div class="actions">
+            <a routerLink="/contacts" mat-raised-button>Cancela</a>
+            <button type="submit" mat-raised-button color="primary" [disabled]="contactForm.invalid">Criar</button>
+        </div>
+    </form>
 </div>

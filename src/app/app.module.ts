@@ -15,8 +15,16 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { ContactListComponent } from './contact-list/contact-list.component';
 import { ContactCreateComponent } from './contact-create/contact-create.component';
 import { ContactUpdateComponent } from './contact-update/contact-update.component';
+import { CelularPipe } from './celular.pipe';
+import { NgxMaskModule } from 'ngx-mask';
 @NgModule({
-  declarations: [AppComponent, ContactListComponent, ContactCreateComponent, ContactUpdateComponent],
+  declarations: [
+    AppComponent,
+    ContactListComponent,
+    ContactCreateComponent,
+    ContactUpdateComponent,
+    CelularPipe,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -29,6 +37,7 @@ import { ContactUpdateComponent } from './contact-update/contact-update.componen
     MatIconModule,
     MatListModule,
     MatToolbarModule,
+    NgxMaskModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],

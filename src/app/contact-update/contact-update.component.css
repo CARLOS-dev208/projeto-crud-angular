@@ -5,3 +5,21 @@
     align-items: center;
     height: 90vh;
 }
+
+.formContent {
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.mat-form-field {
+    width: 100%;
+    color: #fff;
+    font-size: 1.5rem;
+}
