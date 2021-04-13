@@ -1,4 +1,4 @@
-# Projeto-Contatos-Angular
+# Projeto-Contatos-Angular  [![NPM](https://img.shields.io/npm/l/react)](https://github.com/CARLOS-dev208/projeto-crud-angular/blob/main/LICENSE) 
 
 
 Projeto desenvolvido em angular. A aplicação tem como objetivo seguir o fluxo de um CRUD, create, update,delete e read. Tem toda a rotina de cadastro de uma agenda de contatos, assim temos como criar um novo contato, deletar, atualizar e ler.
